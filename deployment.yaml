@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: k8s-project-demo
-          image: 970605359639.dkr.ecr.ap-south-1.amazonaws.com/k8s-project-demo:89a2676214a3eaf95ba7877e4ea161fa726426b0
+          image: 970605359639.dkr.ecr.ap-south-1.amazonaws.com/k8s-project-demo:63f4a00272e6559a03963b1fe46a362aed175fac
           imagePullPolicy: Always
           ports:
             - containerPort: 80
