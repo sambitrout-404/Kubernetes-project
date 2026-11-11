@@ -5,8 +5,7 @@ pipeline {
         stage('Info') {
             steps {
                 sh 'ls -la'
-                sh 'git log -1 --oneline'
-                sh 'second build'
+                sh 'git log -1 --oneline'    
             }
         }
         stage('Validate files') {
