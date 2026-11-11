@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Info') {
+            steps {
+                sh 'ls -la'
+                sh 'git log -1 --oneline'
+            }
+        }
+        stage('Validate files') {
+            steps {
+                sh 'test -f Dockerfile && test -f deployment.yaml && test -f service.yaml'
+                echo 'Required files are present'
+            }
+        }
+    }
+
+    post {
+        success { echo 'Pipeline succeeded' }
+        failure { echo 'Pipeline failed' }
+    }
+}
