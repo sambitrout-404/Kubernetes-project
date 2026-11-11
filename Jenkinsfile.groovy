@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Validate files') {
             steps {
-                sh 'test -f Dockerfile && test -f deployment.yaml && test -f service.yaml'
+                sh 'test -f Dockerfile && test -f missing.yaml && test -f service.yaml'
                 echo 'Required files are present'
             }
         }
